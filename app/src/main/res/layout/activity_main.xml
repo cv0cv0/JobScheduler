@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="76dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/start_task"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/none_received"
+                android:gravity="center"
+                android:text="@string/onstarttask"
+                android:textSize="16sp" />
+
+            <TextView
+                android:id="@+id/stop_task"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginStart="24dp"
+                android:layout_weight="1"
+                android:background="@color/none_received"
+                android:gravity="center"
+                android:text="@string/onstoptask"
+                android:textSize="16sp" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/task_params"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/finish_task"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/finish_job_button_text" />
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp">
+
+            <TableRow>
+
+                <TextView
+                    android:layout_gravity="end|center_vertical"
+                    android:text="@string/work_duration"
+                    android:textSize="16sp" />
+
+                <EditText
+                    android:id="@+id/duration_edit"
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:inputType="number"
+                    android:text="@string/default_duration_time" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_gravity="end|center_vertical"
+                    android:text="@string/connectivity"
+                    android:textSize="16sp" />
+
+                <RadioGroup
+                    android:layout_marginStart="12dp"
+                    android:orientation="horizontal">
+
+                    <RadioButton
+                        android:id="@+id/any_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="@string/any" />
+
+                    <RadioButton
+                        android:id="@+id/wifi_radio"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/wifi" />
+                </RadioGroup>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_gravity="end|center_vertical"
+                    android:text="@string/delay"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:layout_marginStart="12dp"
+                    android:layout_weight="1"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/timing"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/delay_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:text="@string/default_delay_time" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:text="@string/deadline"
+                        android:textSize="16sp" />
+
+                    <EditText
+                        android:id="@+id/deadline_edit"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:layout_weight="1"
+                        android:inputType="number"
+                        android:text="@string/default_deadline_time" />
+                </LinearLayout>
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_gravity="end|center_vertical"
+                    android:text="@string/charging_caption"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/charging_check"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/charging_text" />
+            </TableRow>
+
+            <TableRow>
+
+                <TextView
+                    android:layout_gravity="end|center_vertical"
+                    android:text="@string/idle_caption"
+                    android:textSize="16sp" />
+
+                <CheckBox
+                    android:id="@+id/idle_check"
+                    android:layout_marginStart="12dp"
+                    android:text="@string/idle_mode_text" />
+            </TableRow>
+        </TableLayout>
+
+        <Button
+            android:id="@+id/schedule_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="@string/schedule_job_button_text" />
+
+        <Button
+            android:id="@+id/cancel_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:text="@string/cancel_all_jobs_button_text" />
+    </LinearLayout>
+</ScrollView>
