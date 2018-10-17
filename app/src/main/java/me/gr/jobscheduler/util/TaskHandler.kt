@@ -27,7 +27,7 @@ internal class TaskHandler(activity: MainActivity) : Handler() {
                 sendMessageDelayed(obtainMessage(MSG_UNCOLOR_START), 1000)
             }
             MSG_COLOR_STOP -> {
-                startTask.setBackgroundColor(getColor(mainActivity, R.color.stop_received))
+                stopTask.setBackgroundColor(getColor(mainActivity, R.color.stop_received))
                 updateParams(msg.obj, "stopped")
                 sendMessageDelayed(obtainMessage(MSG_UNCOLOR_STOP), 1000)
             }
